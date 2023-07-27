@@ -1,0 +1,110 @@
+/* Universal Selector */
+* {
+  box-sizing: border-box;
+}
+  
+
+/* Responsive styles */
+@media (max-width: 576px) {
+  .card {
+    border-radius: 0;
+    border: none;
+  }
+}
+
+/* Alignment and sizing */
+.mask {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.card {
+  border-radius: 15px;
+}
+
+.card-body {
+  padding: 2.5rem;
+}
+
+.form-outline {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.form-outline input {
+  width: 100%;
+}
+
+.form-check {
+  justify-content: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-muted {
+  color: #6c757d;
+}
+
+.text-muted a {
+  color: #6c757d;
+}
+
+.text-muted a:hover {
+  color: #6c757d;
+  text-decoration: none;
+}
+
+.form-check-input[type=checkbox] {
+  border-radius: 0.25em;
+}
+
+#registration_form .error-message {
+  color: red;
+  font-size: 12px;
+}
+
+.error-border {
+  border: 1px solid red;
+}
+
+/* Additional style for the "show password" icon */
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+/* Gradient styles */
+.gradient-custom-3 {
+  /* fallback for old browsers */
+  background: #84fab0;
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5));
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5));
+}
+
+.gradient-custom-4 {
+  /* fallback for old browsers */
+  background: #84fab0;
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1));
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1));
+}
