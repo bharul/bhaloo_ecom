@@ -2,9 +2,6 @@
 
 require_once "config.php";
 session_start();
-
-
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   // Get the values from the form submission
   $firstName = isset($_POST['firstName']) ? $_POST['firstName'] : "";
