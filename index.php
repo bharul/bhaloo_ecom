@@ -1,4 +1,5 @@
 <?php
+
 include_once "config.php";
 include_once "database.php";
 
@@ -10,8 +11,6 @@ include "header.php";
 
  include_once "form/side_bar.php";
 //  include_once "form/login_form.php";
-
-
 
 
 // footer section includes all js dependencies

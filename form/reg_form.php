@@ -4,6 +4,7 @@
             <div class="col-12 col-md-9 col-lg-5 col-xl-5">
               <div class="card" style="border-radius: 15px;">
                 <div class="card-body p-3">
+                  <div class="text-center" id="message_box"></div>
                   <h3 class="text-uppercase text-center mb-3"> Create an account </h3>
                   <form id="registration_form">
                     <div class="form-outline mb-3">
@@ -27,7 +28,7 @@
                       
                       <span class="error-message"></span> <!-- This is the span for the error message -->
                       </div>
-                    <div class="form-outline mb-5">
+                    <div class="form-outline mb-3">
                       <label class="form-label" for="c_password"> Confirm password </label>
                       <input type="password" id="c_password" name="c_password" class="form-control form-control-md" />
                       <span class="error-message"></span> <!-- This is the span for the error message -->

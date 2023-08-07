@@ -11,4 +11,8 @@ $(document).ready( function(){
     $('.side-menu-bar').removeClass('moved');
     $('#menu_bar').css('display','block');
   })
+
+  $('.popover-dismiss').popover({
+    trigger: 'focus'
+  })
 })

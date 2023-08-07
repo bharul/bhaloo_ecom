@@ -46,7 +46,6 @@ $(document).ready(function() {
       isValid = false;
     }
     
-    // If the form is valid, you can proceed with the registration process
     if (isValid) {
       $.ajax({
         type : "POST",
@@ -58,14 +57,20 @@ $(document).ready(function() {
           password : password,
         },
         success: function(response){
-          console.log(response);
+          // Parse the JSON response
+          var data = JSON.parse(response);
+          if(data.status === true){
+            $("#message_box").html(data.success);
+            setTimeout(function(){
+              window.location.href = "login.php";
+            }, 2000)
+          } else{
+            $("#your_email").next(".error-message").text(data.error);
+          }
         }
       })      
     }
   });
-
-
-  
 });
 
 
