@@ -1,12 +1,8 @@
 <?php
-// Include the config file to get the table prefix
-// include_once "config.php";
-require_once 'config.php';
 
-// SQL query to create the users table
-// function create_users_table($conn, $table_prefix){
   global $table_prefix;
-  $sql = "CREATE TABLE IF NOT EXISTS {$table_prefix}users (
+  // user details table 
+  $user_sql = "CREATE TABLE IF NOT EXISTS {$table_prefix}users (
     ID bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     user_login varchar(60) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
     user_pass varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
@@ -23,9 +19,18 @@ require_once 'config.php';
     UNIQUE(user_login),
     UNIQUE(user_email)
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci";
-  
-  // Execute the query
-  $conn->exec($sql);
-// }
+  $this->conn->exec($user_sql);
+
+
+  // product details table
+  $products_sql = "CREATE TABLE IF NOT EXISTS {$table_prefix}products (
+      ID bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+      product_title VARCHAR(255) NOT NULL,
+      product_description TEXT NOT NULL,
+      product_price DECIMAL(10, 2) NOT NULL,
+      category VARCHAR(50) NOT NULL,
+      product_image VARCHAR(255) NOT NULL
+  )";
+  $this->conn->exec($products_sql);
 
 ?>

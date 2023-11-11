@@ -26,6 +26,10 @@
   background-color: transparent;
 }
 
+svg {
+  cursor: pointer;
+}
+
 /* Alignment and sizing */
 .mask {
   display: flex;
@@ -144,6 +148,7 @@
 #menu_bar, #menu_close {
   color: #0d0d0d;
   cursor: pointer;
+  position: absolute;
 }
 
 
@@ -153,7 +158,7 @@
 
 .side-menu-head {
   overflow: scroll;
-  z-index: -5;
+  /* z-index: -5; */
   
 }
 
@@ -176,7 +181,7 @@
   /* margin-bottom: 2px; */
   position: relative;
   padding: 10px 15px;
-  border-radius: 50px;
+  border-radius: 50px 20px;
 }
 
 .list li::after {
@@ -186,10 +191,10 @@
   bottom: 0;
   width: 100%;
   height: 2px;
-  background-color: rgb(8, 15, 15); /* Color of the animated underline */
+  background-color: rgb(8, 15, 15,0.5); /* Color of the animated underline */
   transform: scaleX(0); /* Initially, set the scale to 0 (no underline) */
-  transform-origin: right;
-  transition: transform 0.3s ease; /* Animation duration and easing function */
+  /* transform-origin: right; */
+  transition: transform 0.5s ease; /* Animation duration and easing function */
 }
 
 
@@ -231,19 +236,13 @@
     border: none;
   }
 
-  #menu_bar {
-    display: block;
-  }
-
   .main-menu-bar .main-menu {
     display: none;
   }
 }
 
 @media (min-width: 570px) {
-  #menu_bar {
-    display:none;
-  }
+  
 }
 
 /* Top Menu Bar */

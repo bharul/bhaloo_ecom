@@ -48,27 +48,34 @@ $(document).ready(function() {
     
     if (isValid) {
       $.ajax({
-        type : "POST",
-        url : "registration.php",
+        type: "POST",
+        url: "registration.php",
         data: {
-          firstName : firstName,
-          lastName : lastName,
-          email : email,
-          password : password,
+          firstName: firstName,
+          lastName: lastName,
+          email: email,
+          password: password,
         },
-        success: function(response){
-          // Parse the JSON response
+        success: function(response) {
+          console.log("response:" ,response);
           var data = JSON.parse(response);
-          if(data.status === true){
+          if (data.status === true) {
             $("#message_box").html(data.success);
-            setTimeout(function(){
+    
+            // Show a success message and delay before redirecting
+            setTimeout(function() {
               window.location.href = "login.php";
-            }, 2000)
-          } else{
+            }, 2000);
+          } else {
+            // Display error message next to the email field
             $("#your_email").next(".error-message").text(data.error);
           }
+        },
+        error: function(xhr, status, error) {
+          // Handle AJAX error here if needed
+          console.log("AJAX Error:", error);
         }
-      })      
+    });
     }
   });
 });

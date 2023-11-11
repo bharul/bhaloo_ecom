@@ -1,0 +1,39 @@
+#admin_sidebar {
+  margin-top: 50px;
+}
+
+#admin_sidebar li{
+  list-style: none;
+  padding: 10px 100% 10px 20px;
+  /* cursor: pointer; */
+}
+
+#admin_sidebar a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#admin_sidebar li:hover {
+  background-color: #210C2A;
+}
+
+#admin_bg {
+  /* fallback for old browsers */
+  background: #84fab0;
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, rgba(133, 19, 240, 0.5), rgba(41, 2, 73, 0.8));
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, rgba(133, 19, 240, 0.5), rgba(41, 2, 73, 0.8));
+}
+
+
+
+
+
+
+
+@media (max-width: 1200px) {
+  #menu_bar{
+    display: block;
+  }
+}

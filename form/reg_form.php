@@ -1,12 +1,12 @@
     <div class="mask d-flex align-items-center">
         <div class="container h-100 mt-2">
-          <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="row d-flex justify-content-center align-items-center">
             <div class="col-12 col-md-9 col-lg-5 col-xl-5">
               <div class="card" style="border-radius: 15px;">
                 <div class="card-body p-3">
                   <div class="text-center" id="message_box"></div>
                   <h3 class="text-uppercase text-center mb-3"> Create an account </h3>
-                  <form id="registration_form">
+                  <form id="registration_form" method="POST">
                     <div class="form-outline mb-3">
                       <label class="form-label" for="first_name"> First Name </label>
                       <input type="text" id="first_name" name="first_name" class="form-control form-control-md" />
@@ -44,6 +44,3 @@
               </div>
             </div>
           </div>
-
-
-
